@@ -1,0 +1,358 @@
+body {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	/* background: linear-gradient(45deg, #50C9C3, #96DEDA); */
+	background:  #50C9C3;
+	height: 100vh;
+}
+
+.container {
+	height: 90vh;
+	width: 90vw;
+	box-shadow:0 0 2vw 1vw #4444;
+	position: relative;
+}
+
+.teddy {
+	height: 90vmin;
+	width: 70vmin;
+	/* background: #0001; */
+	position: absolute;
+	top: 20%;
+	left: 5%;
+}
+
+.teddy .head {
+	height: 30vmin;
+	width: 30vmin;
+	background: #f1f1f1;
+	border-radius: 50%;
+	position: absolute;
+	left: 20%;
+	top: 6vmin;
+}
+
+.teddy .head .ear {
+	position: absolute;
+	height: 7vmin;
+	width: 7vmin;
+	border: 3vmin solid #f1f1f1;
+	background: #fcbeac;
+	border-radius: 50%;
+	z-index: 1;
+	top: -1vmin;
+	/* left: -1vmin; */
+}
+
+.teddy .head .ear1 {
+	left: -1vmin;
+}
+
+.teddy .head .ear2 {
+	right: -1vmin;
+}
+
+.teddy .head .face {
+	height: inherit;
+	width: inherit;
+	border-radius: inherit;
+	position: absolute;
+	z-index: 3;
+	background: inherit;
+}
+
+.teddy .head .face .mouth {
+	background:  #fcbeac;
+	height: 13vmin;
+	width: 16vmin;
+	position: absolute;
+	border-radius: 50%;
+	left: 50%;
+	transform: translate(-50%, 0);
+	top: 40%;
+}
+
+.teddy .head .face .eye {
+	position: absolute;
+	height: 2vmin;
+	width: 2vmin;
+	background: #444;
+	border-radius: 50%;
+	z-index: 1;
+}
+
+.teddy .head .face .eye.eye1 {
+	left: 20%;
+	top:-.8vmin;
+}
+
+.teddy .head .face .eye.eye2 {
+	right: 20%;
+	top:-.8vmin;
+}
+
+.teddy .head .face .cover {
+	height: inherit;
+	width: inherit;
+	border-radius: inherit;
+	position: absolute;
+	z-index: 3;
+	background: radial-gradient(#fcbeac, #fcb1ac 80%);
+}
+
+.teddy .head .face .cover .nose {
+	height: 3vmin;
+	width: 3vmin;
+	position: absolute;
+	background: #f00;
+	-webkit-transform: rotate(45deg) ;
+	   -moz-transform: rotate(45deg) ;
+	    -ms-transform: rotate(45deg) ;
+	     -o-transform: rotate(45deg) ;
+	        transform: rotate(45deg) ;
+	top: 37%;
+	left: calc(50% - 1.5vmin);
+	border-radius: 0 0 .7vmin 0;
+}
+
+.teddy .head .face .cover .nose::after {
+	content: '';
+	height: 3vmin;
+	width: 3vmin;
+	position: absolute;
+	background: #f00;
+	border-radius: 50%;
+	left: -50%;
+}
+
+.teddy .head .face .cover .nose::before {
+	content: '';
+	height: 3vmin;
+	width: 3vmin;
+	position: absolute;
+	background: #f00;
+	border-radius: 50%;
+	top: -50%;
+}
+
+.teddy .head .collar {
+	position: absolute;
+	bottom: -4vmin;
+	height: 8vmin;
+	width: 15vmin;
+	background: radial-gradient(#ff7b7b, #ff5252 80%);
+	border-radius: 50%;
+}
+
+.teddy .head .collar1 {
+	left: 5%;
+}
+
+.teddy .head .collar2 {
+	right: 5%;
+}
+
+.teddy .body {
+	position: absolute;
+	height: 40vmin;
+	width: 37vmin;
+	background: #f1f1f1;
+	border-radius: 40% 40% 35% 35%;
+	left: 11.2vmin;
+	top: 32vmin;
+	z-index: -1;
+}
+
+.teddy .body .hand1 {
+	height: 30vmin;
+	width: 12vmin;
+	background: #f1f1f1;
+	position: absolute;
+	transform-origin: 0%;
+	transform: rotate(30deg);
+	left: -10%;
+	border-radius: 50%;
+}
+
+.teddy .body .hand1::after {
+	content: '';
+	height: 6vmin;
+	width: 6vmin;
+	border-radius: 50%;
+	position: absolute;
+	bottom: 8%;
+	left: 3vmin;
+	background: radial-gradient(#ff7b7b 70%,#fff 90%);
+}
+
+.teddy .body .hand2 {
+	height: 30vmin;
+	width: 12vmin;
+	background: #f1f1f1;
+	position: absolute;
+	transform-origin: 0%;
+	transform: rotate(-90deg);
+	right: -30%;
+	border-radius: 50%;
+}
+
+.teddy .body .hand2::after {
+	content: '';
+	height: 6vmin;
+	width: 6vmin;
+	border-radius: 50%;
+	position: absolute;
+	bottom: 8%;
+	left: 3vmin;
+	background: radial-gradient(#ff7b7b 70%,#fff 90%);
+}
+
+.teddy .body .belly {
+	height: 25vmin;
+	bottom: 0;
+	position: absolute;
+	width: 26vmin;
+	background: radial-gradient(#ff7b7b, #ff5252 80%);
+	left: calc(50% - 13vmin) ;
+	border-radius: 50% 50% 23% 23%;
+}
+
+.teddy .body .foot {
+	height: 15vmin;
+	width: 15vmin;
+	background:#f1f1f1;
+	border-radius: 50%;
+	position: absolute;
+	bottom: -2vmin;
+	box-shadow: 0 0 1vmin #4443;
+}
+
+.teddy .body .foot1 {
+	left: 9%;
+}
+
+.teddy .body .foot2 {
+	right: 9%;
+}
+
+.teddy .body .foot::after {
+	content: '';
+	height: 2.5vmin;
+	width: 2.5vmin;
+	border-radius: 50%;
+	position: absolute;
+	background: radial-gradient(#ff7b7b 70%,#fff 90%);
+	top: 10%;
+	left: calc(50% - 1.25vmin );
+	box-shadow: -4vmin 2vmin #ff7b7b, 4vmin 2vmin #ff7b7b;
+}
+
+.teddy .body .foot::before {
+	content: '';
+	height: 7vmin;
+	width: 9vmin;
+	background: radial-gradient(#ff7b7b 70%,#fff 90%);
+	position: absolute;		
+	border-radius: 50%;
+	left: calc(50% - 4.5vmin );
+	bottom: 9%;
+}
+
+.teddy .body .foot2 {
+	transform: rotate(10deg);
+}
+
+.teddy .body .foot1 {
+	transform: rotate(-10deg);
+}
+
+
+.teddy .thread {
+	height: 45vmin;
+	width: .3vmin;
+	background: #fcd2ac;
+	position: absolute;
+	left: 82%;
+}
+
+.teddy .thread .curve1 {
+	height: 3vmin;
+	width: 1vmin;
+	border-radius: 50%;
+	position: absolute;
+	top: 40%;
+	left: -.5vmin;
+	background:  #50C9C3;
+	border-left: .5vmin solid #fcd2ac;
+}
+
+.teddy .thread p.text {
+	position: absolute;
+	color: #fff;
+	width: 16vmin;
+	text-align: center;
+	left: calc(50% - 8vmin);
+	top: -18vmin;
+	font-size: 8vmin;
+	font-family: 'Arizonia';
+}
+
+
+.teddy .thread .heart {
+	height: 16vmin;
+	width: 16vmin;
+	position: absolute;
+	background: #f00;
+	-webkit-transform: rotate(45deg) ;
+	   -moz-transform: rotate(45deg) ;
+	    -ms-transform: rotate(45deg) ;
+	     -o-transform: rotate(45deg) ;
+	        transform: rotate(45deg) ;
+	top: -10vmin;
+	left: calc(50% - 1.5vmin);
+	border-radius: 0 0 .7vmin 0;
+	left: calc(50% - 8vmin);
+}
+
+.teddy .thread .heart::after {
+	content: '';
+	height: 16vmin;
+	width: 16vmin;
+	position: absolute;
+	background: #f00;
+	border-radius: 50%;
+	left: -50%;
+}
+
+.teddy .thread .heart::before {
+	content: '';
+	height: 16vmin;
+	width: 16vmin;
+	position: absolute;
+	background: #f00;
+	border-radius: 50%;
+	top: -50%;
+}
+
+.lyrics {
+	position: absolute;
+	bottom: 3vmin;
+	width: 100%;
+}
+
+.lyrics p {
+	text-align: center;
+	width: 100%;
+	line-height: 3vmin;
+	font-family: sans-serif;
+	font-size: 4vmin;
+	color: #fff;
+}
+
+.lyrics p.prev, .lyrics p.next {
+	color: #fffa;
+}
